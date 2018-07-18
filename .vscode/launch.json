@@ -1,0 +1,16 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "al",
+            "request": "launch",
+            "name": "Your own server",
+            "server": "https://air-d365bc-dev.westeurope.cloudapp.azure.com",
+            "tenant": "default",
+            "serverInstance": "nav",
+            "authentication": "UserPassword",
+            "startupObjectId": 22,
+            "startupObjectType": "Page"
+        }
+    ]
+}
