@@ -9,18 +9,23 @@ page 50108 "AppName Role Center"
         {
             part(Headline; "Headline RC AppName")
             {
+                ApplicationArea = Basic, Suite;
             }
             part(Activities; "AppName Activities")
             {
+                ApplicationArea = Basic, Suite;
             }
             part("Help And Chart Wrapper"; "Help And Chart Wrapper")
             {
+                ApplicationArea = Basic, Suite;
             }
             part("Report Inbox Part"; "Report Inbox Part")
             {
+                ApplicationArea = Basic, Suite;
             }
             part("Power BI Report Spinner Part"; "Power BI Report Spinner Part")
             {
+                ApplicationArea = Basic, Suite;
             }
         }
     }
@@ -35,7 +40,8 @@ page 50108 "AppName Role Center"
                 Caption = 'AppName Document';
                 ToolTip = 'Add some tooltip here';
                 Image = New;
-                RunObject = page "AppName Document";
+                RunObject = page "Sales Quote";
+                ApplicationArea = Basic, Suite;
             }
         }
         area(Processing)
@@ -47,8 +53,9 @@ page 50108 "AppName Role Center"
                     RunPageMode = Create;
                     Caption = 'AppName Master Data';
                     ToolTip = 'Register new master data';
-                    RunObject = page "AppName Master Data";
+                    RunObject = page "Customer Card";
                     Image = DataEntry;
+                    ApplicationArea = Basic, Suite;
                 }
             }
             group("AppName Some Processing Group")
@@ -58,7 +65,8 @@ page 50108 "AppName Role Center"
                     Caption = 'AppName Some Process';
                     ToolTip = 'Some process description';
                     Image = Process;
-                    RunObject = Codeunit "AppName Some Process";
+                    RunObject = Codeunit "Update Currency Exchange Rates";
+                    ApplicationArea = Basic, Suite;
                 }
             }
             group("AppName Reports")
@@ -68,7 +76,8 @@ page 50108 "AppName Role Center"
                     Caption = 'AppName Some Report';
                     ToolTip = 'Some report description';
                     Image = Report;
-                    RunObject = report "AppName Some Report";
+                    RunObject = report "Customer - Sales List";
+                    ApplicationArea = Basic, Suite;
                 }
             }
         }
@@ -79,10 +88,11 @@ page 50108 "AppName Role Center"
                 Caption = 'AppName Some Report';
                 ToolTip = 'Some report description';
                 Image = Report;
-                RunObject = report "AppName Some Report";
+                RunObject = report "Customer - Top 10 List";
                 Promoted = true;
                 PromotedCategory = Report;
                 PromotedIsBig = true;
+                ApplicationArea = Basic, Suite;
             }
 
         }
@@ -90,22 +100,23 @@ page 50108 "AppName Role Center"
         {
             action("AppName Master Data List")
             {
-                RunObject = page "AppName Master Data List";
+                RunObject = page "Customer List";
+                ApplicationArea = Basic, Suite;
             }
 
         }
         area(Sections)
         {
-            group(SetupAndExtensions)
+            group(Setup)
             {
-                Caption = 'Setup & Extensions';
+                Caption = 'Setup';
                 ToolTip = 'Overview and change system and application settings, and manage extensions and services';
                 Image = Setup;
 
                 action("AppName Setup")
                 {
                     ToolTip = 'Setup AppName';
-                    RunObject = Page "AppName Setup";
+                    RunObject = Page "Sales & Receivables Setup";
                     ApplicationArea = Basic, Suite;
 
                 }
@@ -128,13 +139,6 @@ page 50108 "AppName Role Center"
                     RunObject = Page "Service Connections";
                     ApplicationArea = Basic, Suite;
                 }
-                action("Extensions")
-                {
-                    ToolTip = 'Install Extensions for greater functionality of the system.';
-                    RunObject = Page "Extension Management";
-                    ApplicationArea = Basic, Suite;
-                }
-
             }
         }
     }
